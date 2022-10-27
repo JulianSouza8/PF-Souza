@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color : rgb(9, 110, 110);
+    text-align: right;
+}
+
+body {
+background-color: azure;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+ul {
+    overflow: hidden;
+    list-style: none;
+    display: inline-block;
+}
+
+ul li {
+    float: left;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+}
+
+.principal {
+    padding: 20px;
+    margin-top: 55px;
+}
+
+.principalText {
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.center {
+text-align: center;
+}
+
+.sizeBig {
+    font-size: 200%;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(9, 110, 110);
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footerSection {
+    padding: 10px;
+    margin: 10px;
+    margin-top: auto;
+}
+
+.footerLinks a {
+    color: white;
+    text-decoration: none;
+}
+/* FOOTER TERMINA */
+
+/* CONTACTO */
+.contactoGrid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+}
+
+.active {
+    color: aquamarine !important;
+}
+
+form {
+    width: 60vh;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: rgb(9, 110, 110);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    padding: 20px;
+}
