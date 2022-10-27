@@ -53,12 +53,10 @@ li a {
     padding: 10px;
 }
 
-.center {
-text-align: center;
-}
-
-.sizeBig {
-    font-size: 200%;
+.Titulo {
+    text-align: center;
+    font-size: 150%;
+    margin: 30px; 
 }
 
 /* FOOTER */
@@ -79,13 +77,13 @@ footer {
     color: white;
     text-decoration: none;
 }
-/* FOOTER TERMINA */
 
 /* CONTACTO */
-.contactoGrid {
+.contacto {
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(2, 1fr);
 }
+
 
 .active {
     color: aquamarine !important;
@@ -122,4 +120,134 @@ input[type=submit]:hover {
 }
 .container {
     padding: 20px;
+}
+
+/* CURSOS */
+.cursos {
+    font-size: 120%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+.CursoPasado {
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    background-color: rgba(102, 102, 102, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoProximo {
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoActual>.CursoTitulo>h4 {
+    color: cadetblue;
+}
+
+.CursoInfo {
+    padding: 15px;
+}
+
+.cursos>div>div>img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.CursoActual {
+    border: 4px solid cadetblue;
+    padding: 20px;
+    font-size: 130%;
+    text-align: center;
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+@media only screen and (min-width: 600px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+/* GALERIA */
+.galeria {
+    display: grid;
+    grid-template-areas:
+        'foto1'
+        'foto2'
+        'foto3'
+        'foto4'
+        'foto5'
+        'foto6';
+    grid-template-columns: repeat(1, auto);
+    align-content: stretch;
+    gap: 10px;
+    padding: 0.5vw;
+    margin-top: 5vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .galeria {
+        display: grid;
+        grid-template-areas:
+            'foto5 foto5 foto3 foto3 foto3 foto3'
+            'foto5 foto5 foto4 foto2 foto2 foto2'
+            'foto6 foto6 foto6 foto6 foto1 foto1';
+        grid-template-columns: repeat(6, auto);
+        align-content: stretch;
+        gap: 10px;
+        padding: 0.5vw;
+    }
+}
+
+.galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+.galeria>div {
+    background-color: #464646;
 }
