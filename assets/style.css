@@ -40,6 +40,27 @@ li a {
     text-align: center;
     padding: 15px 40px;
     text-decoration: none;
+    transition: background-color 1.5s ;
+}
+
+li a:hover {
+    background-color: darkslategray; 
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid rgb(9, 110, 110);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
 
 .principal {
@@ -57,6 +78,19 @@ li a {
     text-align: center;
     font-size: 150%;
     margin: 30px; 
+}
+
+.center {
+    text-align: center;
+}
+
+.ImageFullWidth {
+    min-width: 336px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 280px;
+    height: 400px;
+    object-fit: cover;
 }
 
 /* FOOTER */
