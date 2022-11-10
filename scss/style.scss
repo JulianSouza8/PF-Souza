@@ -1,0 +1,218 @@
+@import "variables" ;
+@import "footer" ;
+@import "header";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+body {
+background-color: map-get($colores, color-secundario);
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid map-get($colores, color-primario);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: map-get($colores, color-fondo);
+}
+
+.principal {
+    padding: 20px;
+    margin-top: 55px;
+}
+
+.principalText {
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.Titulo {
+    text-align: center;
+    font-size: 150%;
+    margin: 30px; 
+}
+
+.center {
+    text-align: center;
+}
+
+.ImageFullWidth {
+    min-width: 336px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 280px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* CONTACTO */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.active {
+    color: map-get($colores, color-activo) !important ;
+    background-color: map-get($colores, color-activo-fondo);
+}
+
+form {
+    width: 60vh;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: map-get($colores, color-primario);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    padding: 20px;
+}
+
+/* CURSOS */
+.cursos {
+    font-size: 120%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+.CursoPasado {
+    border: 1px solid map-get($colores, color-borde);
+    background-color: map-get($colores, color-fondo);
+    color: map-get($colores, color-borde);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoProximo {
+    border: 1px solid map-get($colores, color-borde);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoActual>.CursoTitulo>h4 {
+    color: map-get($colores, color-primario);
+}
+
+.CursoInfo {
+    padding: 15px;
+}
+
+.cursos>div>div>img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.CursoActual {
+    border: 4px solid map-get($colores, color-primario);
+    padding: 20px;
+    font-size: 130%;
+    text-align: center;
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+@media only screen and (min-width: 600px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+/* GALERIA */
+.galeria {
+    display: grid;
+    grid-template-areas:
+        'foto1'
+        'foto2'
+        'foto3'
+        'foto4'
+        'foto5'
+        'foto6';
+    grid-template-columns: repeat(1, auto);
+    align-content: stretch;
+    gap: 10px;
+    padding: 0.5vw;
+    margin-top: 5vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .galeria {
+        display: grid;
+        grid-template-areas:
+            'foto5 foto5 foto3 foto3 foto3 foto3'
+            'foto5 foto5 foto4 foto2 foto2 foto2'
+            'foto6 foto6 foto6 foto6 foto1 foto1';
+        grid-template-columns: repeat(6, auto);
+        align-content: stretch;
+        gap: 10px;
+        padding: 0.5vw;
+    }
+}
+
+.galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@for $i from 1 through 6 {
+    .foto#{$i}{
+        grid-area: foto#{$i};
+    }
+}
+
+.galeria>div {
+    background-color: map-get($colores, color-fondo);
+}

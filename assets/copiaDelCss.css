@@ -1,0 +1,287 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color : rgb(9, 110, 110);
+    text-align: right;
+}
+
+body {
+background-color: azure;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+
+ul {
+    overflow: hidden;
+    list-style: none;
+    display: inline-block;
+}
+
+ul li {
+    float: left;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    transition: background-color 1.5s ;
+}
+
+li a:hover {
+    background-color: darkslategray; 
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid rgb(9, 110, 110);
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.principal {
+    padding: 20px;
+    margin-top: 55px;
+}
+
+.principalText {
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+}
+
+.Titulo {
+    text-align: center;
+    font-size: 150%;
+    margin: 30px; 
+}
+
+.center {
+    text-align: center;
+}
+
+.ImageFullWidth {
+    min-width: 336px;
+    max-width: 100%;
+    width: 100%;
+    min-height: 280px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(9, 110, 110);
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footerSection {
+    padding: 10px;
+    margin: 10px;
+    margin-top: auto;
+}
+
+.footerLinks a {
+    color: white;
+    text-decoration: none;
+}
+
+/* CONTACTO */
+.contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.active {
+    color: aquamarine !important;
+}
+
+form {
+    width: 60vh;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: rgb(9, 110, 110);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.container {
+    padding: 20px;
+}
+
+/* CURSOS */
+.cursos {
+    font-size: 120%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+.CursoPasado {
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    background-color: rgba(102, 102, 102, 0.2);
+    color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoProximo {
+    border: 1px solid rgba(0, 0, 0, 0.331);
+    padding: 20px;
+    text-align: center;
+}
+
+.CursoActual>.CursoTitulo>h4 {
+    color: cadetblue;
+}
+
+.CursoInfo {
+    padding: 15px;
+}
+
+.cursos>div>div>img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.CursoActual {
+    border: 4px solid cadetblue;
+    padding: 20px;
+    font-size: 130%;
+    text-align: center;
+}
+
+.cursos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.5vw;
+}
+
+@media only screen and (min-width: 600px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .cursos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0.5vw;
+    }
+}
+
+/* GALERIA */
+.galeria {
+    display: grid;
+    grid-template-areas:
+        'foto1'
+        'foto2'
+        'foto3'
+        'foto4'
+        'foto5'
+        'foto6';
+    grid-template-columns: repeat(1, auto);
+    align-content: stretch;
+    gap: 10px;
+    padding: 0.5vw;
+    margin-top: 5vh;
+}
+
+@media only screen and (min-width: 800px) {
+    .galeria {
+        display: grid;
+        grid-template-areas:
+            'foto5 foto5 foto3 foto3 foto3 foto3'
+            'foto5 foto5 foto4 foto2 foto2 foto2'
+            'foto6 foto6 foto6 foto6 foto1 foto1';
+        grid-template-columns: repeat(6, auto);
+        align-content: stretch;
+        gap: 10px;
+        padding: 0.5vw;
+    }
+}
+
+.galeria div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+.galeria>div {
+    background-color: #464646;
+}

@@ -1,0 +1,29 @@
+ul {
+    overflow: hidden;
+    list-style: none;
+    display: inline-block;
+    li {
+        float: left;
+    }
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 40px;
+            text-decoration: none;
+            transition: background-color 1.5s ;
+        }
+}
+
+li a:hover {
+    background-color: map-get($colores, color-activo-fondo); 
+    
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color : map-get($colores, color-primario);
+    text-align: right;
+}
